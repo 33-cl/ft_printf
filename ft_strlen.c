@@ -6,11 +6,12 @@
 /*   By: maeferre <maeferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:49:42 by maeferre          #+#    #+#             */
-/*   Updated: 2023/12/01 17:46:28 by maeferre         ###   ########.fr       */
+/*   Updated: 2023/12/01 19:57:48 by maeferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <unistd.h>
 
 size_t	ft_strlen(const char *s)
 {
