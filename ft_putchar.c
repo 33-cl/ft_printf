@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_X.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maeferre <maeferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 16:19:35 by maeferre          #+#    #+#             */
-/*   Updated: 2023/12/01 16:45:28 by maeferre         ###   ########.fr       */
+/*   Created: 2023/12/01 16:42:19 by maeferre          #+#    #+#             */
+/*   Updated: 2023/12/01 16:43:31 by maeferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <unistd.h>
 
-int		ft_print_X(va_list args)
+int		ft_putchar(char c)
 {
-	return (ft_puthexa_upper(va_arg(args, unsigned int)));
+	return (write(1, &c, 1));
 }

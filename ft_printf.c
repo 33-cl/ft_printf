@@ -6,7 +6,7 @@
 /*   By: maeferre <maeferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:50:12 by maeferre          #+#    #+#             */
-/*   Updated: 2023/12/01 16:14:49 by maeferre         ###   ########.fr       */
+/*   Updated: 2023/12/01 16:44:00 by maeferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_printf(char const *format, ...)
 	return (nb_printed);
 }
  
-/*
+
 #include <stdio.h>
 #include <limits.h>
 int main()
@@ -56,4 +56,3 @@ int main()
 
 	return 0;
 }
-*/
