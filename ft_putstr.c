@@ -6,7 +6,7 @@
 /*   By: maeferre <maeferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:50:33 by maeferre          #+#    #+#             */
-/*   Updated: 2023/12/01 16:54:54 by maeferre         ###   ########.fr       */
+/*   Updated: 2023/12/01 17:45:33 by maeferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int		ft_putstr(char *s)
 {
-	return (write(1, &s, ft_strlen(s)));
+	return (write(1, s, ft_strlen(s)));
 }
 

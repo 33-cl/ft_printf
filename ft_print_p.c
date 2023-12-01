@@ -6,7 +6,7 @@
 /*   By: maeferre <maeferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 17:25:47 by maeferre          #+#    #+#             */
-/*   Updated: 2023/12/01 17:30:53 by maeferre         ###   ########.fr       */
+/*   Updated: 2023/12/01 17:47:40 by maeferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ int		ft_print_p(va_list args)
 	unsigned long	address;
 
 	address = (unsigned long)va_arg(args, void *);
-	return (ft_puthexa_lower(address));
+	return (ft_putstr("0x") && ft_puthexa_lower(address));
 }
