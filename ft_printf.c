@@ -6,20 +6,22 @@
 /*   By: maeferre <maeferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:50:12 by maeferre          #+#    #+#             */
-/*   Updated: 2023/12/01 21:05:49 by maeferre         ###   ########.fr       */
+/*   Updated: 2023/12/04 16:48:51 by maeferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdarg.h>
- 
-int	ft_printf(char const *format, ...)
+
+static int	invalid_char(char c);
+
+int	ft_printf(const char *format, ...)
 {
 	size_t		i;
 	va_list		args;
 	int			nb_printed;
 	int			val_print;
-	
+
 	i = 0;
 	nb_printed = 0;
 	va_start(args, format);
@@ -28,12 +30,21 @@ int	ft_printf(char const *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			if (invalid_char(format[i]))
+			{
+				if (ft_putstr("-1") == -1)
+					return (-1);
+				return (nb_printed + 2);
+			}
 			val_print = ft_print_type(format[i], args);
+			if (val_print == -1)
+				return (-1);
 			nb_printed += val_print;
 		}
 		else
 		{
-			ft_putchar(format[i]);
+			if (ft_putchar(format[i]) == -1)
+				return (-1);
 			nb_printed++;
 		}
 		i++;
@@ -41,18 +52,11 @@ int	ft_printf(char const *format, ...)
 	va_end(args);
 	return (nb_printed);
 }
- 
-/*
-#include <stdio.h>
-#include <limits.h>
-int main()
+
+static int	invalid_char(char c)
 {
-	int	size_printf;
-	int size_ft_printf = ft_printf("ft_printf : %p\t||   ", 16);
-	printf(" size = %d\n", size_ft_printf);
-
-	//size_printf = printf("printf    : %p\t||   ", 16);
-	//printf(" size = %d\n", size_printf);
-
-	return 0;
-}*/
+	if (c == 'c' || c == 'd' || c == 'p' || c == 's' || c == 'u'
+		|| c == 'x' || c == 'X' || c == '%' || c == 'i')
+		return (0);
+	return (1);
+}

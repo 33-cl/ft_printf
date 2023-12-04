@@ -6,7 +6,7 @@
 /*   By: maeferre <maeferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 15:59:35 by maeferre          #+#    #+#             */
-/*   Updated: 2023/12/01 21:06:37 by maeferre         ###   ########.fr       */
+/*   Updated: 2023/12/04 13:03:30 by maeferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,29 @@
 
 int		ft_puthexa_lower(unsigned long nb)
 {
+	unsigned long div;
+	unsigned long modulo;
+
 	if (nb >= 16)
-		return (ft_puthexa_lower(nb / 16) + ft_puthexa_lower(nb % 16));
+	{
+		div = ft_puthexa_lower(nb / 16);
+		modulo = ft_puthexa_lower(nb % 16);
+		if (div >= 0 && modulo >= 0)
+			return (div + modulo);
+		return (-1);
+	}
 	else
 	{
 		if (nb < 10)
-			ft_putchar(nb + '0');
+		{
+			if (ft_putchar(nb + '0') == -1)
+				return (-1);
+		}
 		else
-			ft_putchar((nb - 10) + 'a');
+		{
+			if (ft_putchar((nb - 10) + 'a') == -1)
+				return (-1);
+		}
 	}
 	return (1);
 }

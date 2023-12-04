@@ -6,18 +6,17 @@
 /*   By: maeferre <maeferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 23:53:31 by maeferre          #+#    #+#             */
-/*   Updated: 2023/12/01 19:39:07 by maeferre         ###   ########.fr       */
+/*   Updated: 2023/12/04 16:49:50 by maeferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef PRINTF_H
+# define PRINTF_H
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include <stddef.h>
-
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdarg.h>
+# include <stddef.h>
 
 size_t	ft_strlen(const char *s);
 int		ft_print_c(va_list args);
