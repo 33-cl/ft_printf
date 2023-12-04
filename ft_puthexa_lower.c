@@ -6,16 +6,16 @@
 /*   By: maeferre <maeferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 15:59:35 by maeferre          #+#    #+#             */
-/*   Updated: 2023/12/04 13:03:30 by maeferre         ###   ########.fr       */
+/*   Updated: 2023/12/04 17:01:28 by maeferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_puthexa_lower(unsigned long nb)
+int	ft_puthexa_lower(unsigned long nb)
 {
-	unsigned long div;
-	unsigned long modulo;
+	unsigned long	div;
+	unsigned long	modulo;
 
 	if (nb >= 16)
 	{

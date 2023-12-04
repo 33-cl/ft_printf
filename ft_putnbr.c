@@ -6,7 +6,7 @@
 /*   By: maeferre <maeferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 17:02:34 by maeferre          #+#    #+#             */
-/*   Updated: 2023/12/04 13:21:25 by maeferre         ###   ########.fr       */
+/*   Updated: 2023/12/04 16:56:12 by maeferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_putnbr(int n)
 	int		sign;
 	int		div;
 	int		modulo;
-	
+
 	sign = 0;
 	if (n == -2147483648)
 	{

@@ -6,13 +6,13 @@
 /*   By: maeferre <maeferre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:50:33 by maeferre          #+#    #+#             */
-/*   Updated: 2023/12/04 13:12:47 by maeferre         ###   ########.fr       */
+/*   Updated: 2023/12/04 16:56:28 by maeferre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
 	int	length;
 
