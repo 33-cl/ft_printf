@@ -6,7 +6,7 @@
 #    By: maeferre <maeferre@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/28 23:48:47 by maeferre          #+#    #+#              #
-#    Updated: 2023/12/01 18:11:36 by maeferre         ###   ########.fr        #
+#    Updated: 2023/12/04 18:28:43 by maeferre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC = ft_printf.c \
 	  ft_print_s.c \
 	  ft_print_u.c \
 	  ft_print_x.c \
-	  ft_print_X.c \
+	  ft_print_x2.c \
 	  ft_putnbr.c \
 	  ft_putnbr_unsigned.c \
 	  ft_putstr.c \
